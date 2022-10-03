@@ -326,6 +326,10 @@ void GameObjectManager::do_CREATE_MESH(Events::Event *pEvt)
 				pSN->m_base.setU(pRealEvent->m_u);
 				pSN->m_base.setV(pRealEvent->m_v);
 				pSN->m_base.setN(pRealEvent->m_n);
+
+
+				// Add a physics component 
+				pSN->physicsTime(pMeshInstance->getFirstParentByTypePtr<Mesh>(), pMeshInstance);
 			}
 			else
 			{

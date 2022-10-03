@@ -20,4 +20,4 @@ set OLDPATH=%CD%
 
 CD /D %OLDPATH%
 
-IF NOT DEFINED MAYA_DIR set MAYA_DIR=C:\Program Files\Autodesk\Maya2011
+IF NOT DEFINED MAYA_DIR set MAYA_DIR=C:\Program Files\Autodesk\Maya2019

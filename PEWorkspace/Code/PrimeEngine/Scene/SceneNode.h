@@ -13,6 +13,7 @@
 #include "../Events/Component.h"
 #include "../Utils/Array/Array.h"
 #include "Light.h"
+#include "PhysicsComponent.h"
 
 //#define USE_DRAW_COMPONENT
 
@@ -23,7 +24,10 @@ struct SceneNode : public Component
 	PE_DECLARE_CLASS(SceneNode);
 
 	// Constructor -------------------------------------------------------------
-	SceneNode(PE::GameContext &context, PE::MemoryArena arena, Handle hMyself);
+	SceneNode(PE::GameContext& context, PE::MemoryArena arena, Handle hMyself);
+	
+	// Physics constructor
+	void physicsTime(Mesh* m, MeshInstance* mi);
 
 	virtual ~SceneNode() {}
 
@@ -50,6 +54,8 @@ struct SceneNode : public Component
 
 	static SceneNode *s_pRootSceneNode;
 	Array<Handle> m_lights;
+	PhysicsComponent* p;
+	bool hasPhysics;
 }; // class SceneNode
 
 struct JointSceneNode : public SceneNode

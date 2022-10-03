@@ -6,6 +6,7 @@
 #include "PrimeEngine/Scene/MeshInstance.h"
 #include "PrimeEngine/Scene/DefaultAnimationSM.h"
 #include "PrimeEngine/Scene/SkeletonInstance.h"
+#include "PhysicsComponent.h"
 
 namespace PE {
 namespace Components {
@@ -17,6 +18,13 @@ SceneNode *SceneNode::s_pRootSceneNode = 0;
 // Constructor -------------------------------------------------------------
 SceneNode::SceneNode(PE::GameContext &context, PE::MemoryArena arena, Handle hMyself) :  Component(context, arena, hMyself), m_lights(context, arena, 8), m_inheritPositionOnly(false)
 {
+}
+
+void SceneNode::physicsTime(Mesh* m, MeshInstance* mi) {
+	if (!hasPhysics) {
+		hasPhysics = true;
+		p = new PhysicsComponent(m, mi);
+	}
 }
 
 void SceneNode::addDefaultComponents()
