@@ -329,7 +329,7 @@ void GameObjectManager::do_CREATE_MESH(Events::Event *pEvt)
 
 
 				// Add a physics component 
-				pSN->physicsTime(pMeshInstance->getFirstParentByTypePtr<Mesh>(), pMeshInstance);
+				pSN->physicsTime(&pSN->m_base, &pSN->m_worldTransform, pMeshInstance->getFirstParentByTypePtr<Mesh>(), pMeshInstance, "box");
 			}
 			else
 			{

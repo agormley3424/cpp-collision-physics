@@ -51,6 +51,7 @@
     <ClInclude Include="CharacterControl\testfunc_c_stdcall.h" />
     <ClInclude Include="PhysicsManager.h" />
     <ClInclude Include="PhysicsComponent.h" />
+    <ClInclude Include="Plane.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CharacterControl\Characters\SoldierNPC.cpp">
@@ -87,6 +88,7 @@
     <ClCompile Include="CharacterControl\main.cpp" />
     <ClCompile Include="PhysicsComponent.cpp" />
     <ClCompile Include="PhysicsManager.cpp" />
+    <ClCompile Include="Plane.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Masm Include="CharacterControl\test.asm" />

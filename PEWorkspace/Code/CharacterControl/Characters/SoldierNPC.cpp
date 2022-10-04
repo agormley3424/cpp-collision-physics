@@ -115,7 +115,7 @@ SoldierNPC::SoldierNPC(PE::GameContext &context, PE::MemoryArena arena, PE::Hand
 
 
 		// Add a physics component to the soldier
-		pMainSN->physicsTime(pMeshInstance->getFirstParentByTypePtr<Mesh>(), pMeshInstance);
+		pMainSN->physicsTime(&pMainSN->m_base, &pMainSN->m_worldTransform, pMeshInstance->getFirstParentByTypePtr<Mesh>(), pMeshInstance, "sphere");
 
 		// add skin to scene node
 		pRotateSN->addComponent(hSkeletonInstance);

@@ -7,6 +7,7 @@
 #include "PrimeEngine/Scene/DefaultAnimationSM.h"
 #include "PrimeEngine/Scene/SkeletonInstance.h"
 #include "PhysicsComponent.h"
+#include "PhysicsManager.h"
 
 namespace PE {
 namespace Components {
@@ -20,10 +21,11 @@ SceneNode::SceneNode(PE::GameContext &context, PE::MemoryArena arena, Handle hMy
 {
 }
 
-void SceneNode::physicsTime(Mesh* m, MeshInstance* mi) {
+void SceneNode::physicsTime(Matrix4x4* in_base, Matrix4x4* in_worldTransform, Mesh* m, MeshInstance* mi, std::string type) {
 	if (!hasPhysics) {
 		hasPhysics = true;
-		p = new PhysicsComponent(m, mi);
+		p = new PhysicsComponent(in_base, in_worldTransform, m, mi, type);
+		PhysicsManager::addComponent(p);
 	}
 }
 

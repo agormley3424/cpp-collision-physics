@@ -27,7 +27,7 @@ struct SceneNode : public Component
 	SceneNode(PE::GameContext& context, PE::MemoryArena arena, Handle hMyself);
 	
 	// Physics constructor
-	void physicsTime(Mesh* m, MeshInstance* mi);
+	void physicsTime(Matrix4x4* in_base, Matrix4x4* in_worldTransform, Mesh* m, MeshInstance* mi, std::string type);
 
 	virtual ~SceneNode() {}
 
