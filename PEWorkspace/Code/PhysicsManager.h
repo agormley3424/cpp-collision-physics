@@ -17,7 +17,7 @@
 			static bool collCheck(PhysicsComponent* phys);
 
 			static void addComponent(PhysicsComponent* p);
-			static bool projectPoint(Vector3* center, float radius, Plane* plane);
+			static bool projectPoint(Vector3* center, PrimitiveTypes::Float32 radius, Plane* plane);
 
 			static Vector3 collAdjust(PhysicsComponent);
 			static bool pointColl(Vector3* point, Plane* plane);

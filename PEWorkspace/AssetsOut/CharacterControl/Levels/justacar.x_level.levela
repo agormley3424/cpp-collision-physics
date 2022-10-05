@@ -1,0 +1,2 @@
+LevelLoader.CreateGameObject("PEObject47_pCar",1.0, 0.0, -0.0, 0.0, 0.0, 1.0, -0.0, 0.0, -0.0, -0.0, 1.0, 0.0, 0.0, 0.0, -0.0, 1.0, 'justACar.x_PEObject47_pCar.lua', 'CharacterControl',0xeac6b4b0, 0x446511ed, 0x89abe4b9, 0x7ae55718)
+

@@ -4,11 +4,13 @@
 // Points should be given in order of two parallel pairs
 Plane::Plane(Vector3 vec1, Vector3 vec2, Vector3 vec3, Vector3 vec4) {
 
-	Vector3 newVec1 = vec1 - vec2;
-	Vector3 newVec2 = vec3 - vec4;
+	Vector3 newVec1 = vec1 - vec3;
+	Vector3 newVec2 = vec1 - vec2;
 
-	normal = vec1.crossProduct(vec2);
+	normal = newVec1.crossProduct(newVec2);
+	normal = normal;
 	normal.normalize();
+
 
 	points[0] = vec1;
 	points[1] = vec2;

@@ -14,10 +14,15 @@
 			PositionBufferCPU* p = (PositionBufferCPU*)m->m_hPositionBufferCPU.getObject();
 			PrimitiveTypes::Float32* verts = p->m_values.getFirstPtr();
 
+			//PrimitiveTypes::Float32 maxVert[3] = { NEGINFINITY, NEGINFINITY, NEGINFINITY };
+			//PrimitiveTypes::Float32 minVert[3] = { POSINFINITY, POSINFINITY, POSINFINITY };
 
-			PrimitiveTypes::Float32 maxVert[3] = { NEGINFINITY, NEGINFINITY, NEGINFINITY };
-			PrimitiveTypes::Float32 minVert[3] = { POSINFINITY, POSINFINITY, POSINFINITY };
+			PrimitiveTypes::Float32 maxVert[3] = { verts[0], verts[0], verts[0] };
+			PrimitiveTypes::Float32 minVert[3] = { verts[0], verts[0], verts[0] };
+
 			PrimitiveTypes::UInt32 numVerts = p->m_values.m_size; // how much is stored at the moment
+
+			assert(numVerts > 0);
 
 			for (int i = 0; i < numVerts; i += 3) {
 				maxVert[0] = max(maxVert[0], verts[i]);

@@ -41,7 +41,7 @@
 			Matrix4x4* m_worldTransform;
 			Plane* box;
 			Vector3 center;
-			float radius;
+			PrimitiveTypes::Float32 radius;
 			std::string type;
 		};
 
