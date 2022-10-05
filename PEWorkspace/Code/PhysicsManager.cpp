@@ -11,7 +11,7 @@
 		//	return false;
 		//}
 
-std::vector<PhysicsComponent*>* PhysicsManager::objectArr = {};
+std::vector<PhysicsComponent*> PhysicsManager::objectArr = {};
 
 
 
@@ -28,7 +28,7 @@ bool PhysicsManager::pointColl(Vector3 point, Plane* plane) {
 // Then checks whether it's "behind" the plane or not
 // If I run this on every single plane, and they all come back as collisions, this should work, even though it's using infinite plane equations (I think)
 bool PhysicsManager::projectPoint(Vector3* center, float radius, Plane* plane) {
-	assert(plane->normal.length() == 1);
+	//assert(plane->normal.length() >= 0.99 && plane->normal.length() <= 1);
 	
 	Vector3 planeDir = plane->normal * -1;
 
@@ -78,13 +78,13 @@ bool PhysicsManager::fullCheck(PhysicsComponent* phys)
 {
 	bool collision = false;;
 
-	for (int i = 0; i < objectArr->size(); ++i) {
-		if ((*objectArr)[i]->label != phys->label) {
-			if (phys->type.compare("sphere") == 0 && (*objectArr)[i]->type.compare("box") == 0) {
-				collision = spBoxCheck(phys, (*objectArr)[i]);
+	for (int i = 0; i < objectArr.size(); ++i) {
+		if (objectArr[i]->label != phys->label) {
+			if (phys->type.compare("sphere") == 0 && objectArr[i]->type.compare("box") == 0) {
+				collision = spBoxCheck(phys, objectArr[i]);
 			}
-			else if (phys->type.compare("box") == 0 && (*objectArr)[i]->type.compare("sphere") == 0) {
-				collision = spBoxCheck((*objectArr)[i], phys);
+			else if (phys->type.compare("box") == 0 && objectArr[i]->type.compare("sphere") == 0) {
+				collision = spBoxCheck(objectArr[i], phys);
 			}
 			else {
 				continue;
@@ -96,9 +96,9 @@ bool PhysicsManager::fullCheck(PhysicsComponent* phys)
 }
 
 void PhysicsManager::addComponent(PhysicsComponent* p) {
-	p->label = PhysicsManager::objectArr->size();
+	p->label = PhysicsManager::objectArr.size();
 	//objectArr[0] = p;
-	PhysicsManager::objectArr->push_back(p);
+	PhysicsManager::objectArr.push_back(p);
 }
 
 
