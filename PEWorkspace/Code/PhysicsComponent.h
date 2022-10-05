@@ -31,6 +31,9 @@
 
 			Plane* maxPoints(PE::Components::Mesh* m);
 
+			Vector3 getCenter();
+
+
 			unsigned int label;
 			PE::Components::Mesh* mesh;
 			PE::Components::MeshInstance* meshInstance;

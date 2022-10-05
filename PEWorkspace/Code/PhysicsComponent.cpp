@@ -39,6 +39,19 @@
 			Vector3 bottomBackLeft = { minVert[0], minVert[1],maxVert[2] };
 			Vector3 bottomBackRight = { maxVert[0], minVert[1],maxVert[2] };
 
+
+			/*
+			Vector3 topForwardLeft = (*m_base) * topForwardLeft;
+			Vector3 topForwardRight = (*m_base) * topForwardRight;
+			Vector3 topBackLeft = (*m_base) * topBackLeft;
+			Vector3 topBackRight = (*m_base) * topBackRight;
+
+			Vector3 bottomForwardLeft = (*m_base) * bottomForwardLeft;
+			Vector3 bottomForwardRight = (*m_base) * bottomForwardRight;
+			Vector3 bottomBackLeft = (*m_base) * bottomBackLeft;
+			Vector3 bottomBackRight = (*m_base) * bottomBackRight;*/
+
+
 			Plane* planeList = (Plane*) calloc(6, sizeof(Plane));
 
 			planeList[0] = { topForwardLeft, bottomForwardLeft, topForwardRight, bottomForwardRight };
@@ -73,7 +86,13 @@
 		}
 
 		Plane* PhysicsComponent::returnPlanes() {
-			return box;
+			Plane* transformedPlanes = (Plane*) calloc(6, sizeof(Plane));
+
+			for (int i = 0; i < 6; ++i) {
+				transformedPlanes[i] = *(box[i].transform(*m_base));
+			}
+
+			return transformedPlanes;
 		}
 
 		bool PhysicsComponent::checkCollision(Vector3& planeVec1, Vector3& planeVec2) {
@@ -87,6 +106,10 @@
 
 		PhysicsComponent::~PhysicsComponent() {
 			free(box);
+		}
+
+		Vector3  PhysicsComponent::getCenter() {
+			return (*m_base) * center;
 		}
 //	}
 //}

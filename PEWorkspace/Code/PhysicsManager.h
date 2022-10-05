@@ -14,11 +14,16 @@
 		public:
 			PhysicsManager();
 
-			static bool collCheck(PhysicsComponent);
+			static bool collCheck(PhysicsComponent* phys);
 
 			static void addComponent(PhysicsComponent* p);
+			bool projectPoint(Vector3* center, float radius, Plane* plane);
 
 			static Vector3 collAdjust(PhysicsComponent);
+			bool pointColl(Vector3* point, Plane* plane);
+			bool pointColl(Vector3 point, Plane* plane);
+			bool spBoxCheck(PhysicsComponent* sphere, PhysicsComponent* box);
+			bool fullCheck(PhysicsComponent* phys);
 
 
 			//static vector<PhysicsComponent*> objectArr(100, NULL);

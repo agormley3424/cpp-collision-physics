@@ -1,24 +1,7 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(400,5): warning MSB8029: The Intermediate directory or Output directory cannot reside under the Temporary directory as it could lead to issues with incremental build.
-  SoldierNPC.cpp
-  SoldierNPCBehaviorSM.cpp
-  SoldierNPCMovementSM.cpp
-  ClientSpaceShip.cpp
-  ClientSpaceShipControls.cpp
-  ClientCharacterControlGame.cpp
-  ClientGameObjectManagerAddon.cpp
-  Events.cpp
-  GameObjectManagerAddon.cpp
-  GlobalRegistry.cpp
-  ServerCharacterControlGame.cpp
-  ServerGameObjectManagerAddon.cpp
-c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\charactercontrol\characters\soldiernpcbehaviorsm.cpp(104): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\charactercontrol\characters\soldiernpc.cpp(91): warning C4305: 'argument': truncation from 'double' to 'float'
-  ClientTank.cpp
-  main.cpp
-  PhysicsComponent.cpp
   PhysicsManager.cpp
-c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\physicscomponent.cpp(22): warning C4018: '<': signed/unsigned mismatch
+  Plane.cpp
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\physicsmanager.cpp(81): warning C4018: '<': signed/unsigned mismatch
 SoldierNPC.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
   CharacterControl-win32d3d9.vcxproj -> C:\Users\aaron\Desktop\Schoolwork\CSCI_522\HW4\PEWorkspace\Code\..\build\CharacterControl-win32d3d9.exe
   CharacterControl-win32d3d9.vcxproj -> ..\build\CharacterControl-win32d3d9.pdb (Full PDB)
