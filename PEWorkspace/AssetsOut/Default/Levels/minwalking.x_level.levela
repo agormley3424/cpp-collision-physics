@@ -1,0 +1,8 @@
+LevelLoader.CreateGameObject("PEObject16_tArrow",0.875067, 0.0, 0.484002, 0.0, 0.0, 1.0, -0.0, 0.0, -0.484002, -0.0, 0.875067, 0.0, 943.203754, 0.0, 752.801752, 1.0, 'minWalking.x_PEObject16_tArro.lua', 'Default',0x76f9d530, 0x1c5411e0, 0xbea5001b, 0x213b583a)
+
+LevelLoader.CreateGameObject("PEObject15_tArrow",0.412808, 0.0, -0.910818, 0.0, -0.0, 1.0, -0.0, 0.0, 0.910818, 0.0, 0.412808, 0.0, -134.409365, 0.0, 343.316083, 1.0, 'minWalking.x_PEObject15_tArro.lua', 'Default',0x7077e0cf, 0x1c5411e0, 0xb14b001b, 0x213b583a)
+
+LevelLoader.CreateGameObject("PEObject45_nazi_rep",1.0, 0.0, -0.0, 0.0, 0.0, 1.0, -0.0, 0.0, -0.0, -0.0, 1.0, 0.0, 199.107586, 0.0, -0.0, 1.0, 'minWalking.x_PEObject45_nazi_.lua', 'Default',0x2bda3070, 0x2bfc11e4, 0x9209b8e8, 0x560d92e3)
+
+LevelLoader.CreateGameObject("PEObject17_pCar",-0.999069, -0.0, 0.043144, 0.0, 0.0, 1.0, 0.0, 0.0, -0.043144, -0.0, -0.999069, 0.0, 453.346931, 0.0, 527.207712, 1.0, 'minWalking.x_PEObject17_pCar.lua', 'Default',0xb2cfd370, 0x1c5411e0, 0x9f4e001b, 0x213b583a)
+

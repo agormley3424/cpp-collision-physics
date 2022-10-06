@@ -99,7 +99,8 @@
 
 			if (type.compare("sphere") == 0) {
 				center = in_base->getPos();
-				radius = 50;
+				center += {0, 1, 0};
+				radius = 0;
 			}
 			else if (type.compare("box") == 0) {
 				box = maxPoints(mesh);
