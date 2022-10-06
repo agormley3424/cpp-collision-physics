@@ -59,12 +59,31 @@
 
 			Plane* planeList = (Plane*) calloc(6, sizeof(Plane));
 
-			planeList[0] = { topForwardLeft, bottomForwardLeft, topForwardRight, bottomForwardRight };
-			planeList[1] = { topBackLeft, bottomBackLeft, topForwardLeft, bottomForwardLeft };
-			planeList[2] = { topForwardRight, bottomForwardRight, topBackRight, bottomBackRight };
-			planeList[3] = { topBackRight, bottomBackRight, topBackLeft, bottomBackLeft };
-			planeList[4] = { topForwardLeft, topForwardRight, topBackLeft, topBackRight };
-			planeList[5] = { bottomForwardLeft, bottomForwardRight, bottomBackLeft, bottomBackRight };
+			//planeList[0] = { topForwardLeft, bottomForwardLeft, topForwardRight, bottomForwardRight };
+			//planeList[1] = { topBackLeft, bottomBackLeft, topForwardLeft, bottomForwardLeft };
+			//planeList[2] = { topForwardRight, bottomForwardRight, topBackRight, bottomBackRight };
+			//planeList[3] = { topBackRight, bottomBackRight, topBackLeft, bottomBackLeft };
+			//planeList[4] = { topForwardLeft, topForwardRight, topBackLeft, topBackRight };
+			//planeList[5] = { bottomForwardLeft, bottomForwardRight, bottomBackLeft, bottomBackRight };
+
+
+			// Front face
+			planeList[0] = { topForwardLeft, topForwardRight, bottomForwardRight, bottomForwardLeft };
+
+			// Left face
+			planeList[1] = { topBackLeft, topForwardLeft, bottomForwardLeft, bottomBackLeft };
+
+			// Right face
+			planeList[2] = { topForwardRight, topBackRight, bottomBackRight, bottomForwardRight };
+
+			// Back face
+			planeList[3] = { topBackRight, topBackLeft, bottomBackLeft, bottomBackRight };
+
+			// Top face
+			planeList[4] = { topBackLeft, topBackRight, topForwardRight, topForwardLeft };
+
+			// Bottom face
+			planeList[5] = { bottomForwardLeft, bottomForwardRight, bottomBackRight, bottomBackLeft};
 
 			return planeList;
 		}
@@ -80,7 +99,7 @@
 
 			if (type.compare("sphere") == 0) {
 				center = in_base->getPos();
-				radius = 1;
+				radius = 50;
 			}
 			else if (type.compare("box") == 0) {
 				box = maxPoints(mesh);

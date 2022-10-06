@@ -89,10 +89,13 @@ void SoldierNPCMovementSM::do_SoldierNPCMovementSM_Event_STOP(PE::Events::Event 
 
 void SoldierNPCMovementSM::do_UPDATE(PE::Events::Event *pEvt)
 {
+
+	SceneNode* pSN = getParentsSceneNode();
+	std::cerr << (PhysicsManager::fullCheck(pSN->p));
 	if (m_state == WALKING_TO_TARGET)
 	{
 		// see if parent has scene node component
-		SceneNode *pSN = getParentsSceneNode();
+
 		if (pSN)
 		{
 			Vector3 curPos = pSN->m_base.getPos();
@@ -119,11 +122,12 @@ void SoldierNPCMovementSM::do_UPDATE(PE::Events::Event *pEvt)
 				pSN->m_base.turnInDirection(dir, 3.1415f);
 				pSN->m_base.setPos(curPos + dir * dist);
 
-				std::cerr << (PhysicsManager::fullCheck(pSN->p));
+				//std::cerr << (PhysicsManager::fullCheck(pSN->p));
 			}
 
 			if (reached)
 			{
+
 				m_state = STANDING;
 				
 				// target has been reached. need to notify all same level state machines (components of parent)
