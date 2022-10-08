@@ -1,4 +1,4 @@
-LevelLoader.CreateGameObject("PEObject16_tArrow",0.875067, 0.0, 0.484002, 0.0, 0.0, 1.0, -0.0, 0.0, -0.484002, -0.0, 0.875067, 0.0, 943.203754, 0.0, 752.801752, 1.0, 'minWalking.x_PEObject16_tArro.lua', 'Default',0x76f9d530, 0x1c5411e0, 0xbea5001b, 0x213b583a)
+LevelLoader.CreateGameObject("PEObject16_tArrow",0.875067, 0.0, 0.484002, 0.0, 0.0, 1.0, -0.0, 0.0, -0.484002, -0.0, 0.875067, 0.0, 943.203754, 0.0, 416.053851, 1.0, 'minWalking.x_PEObject16_tArro.lua', 'Default',0x76f9d530, 0x1c5411e0, 0xbea5001b, 0x213b583a)
 
 LevelLoader.CreateGameObject("PEObject15_tArrow",0.412808, 0.0, -0.910818, 0.0, -0.0, 1.0, -0.0, 0.0, 0.910818, 0.0, 0.412808, 0.0, -134.409365, 0.0, 343.316083, 1.0, 'minWalking.x_PEObject15_tArro.lua', 'Default',0x7077e0cf, 0x1c5411e0, 0xb14b001b, 0x213b583a)
 

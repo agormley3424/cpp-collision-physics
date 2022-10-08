@@ -2,6 +2,7 @@
 #include "PhysicsComponent.h"
 #include <vector>
 #include <assert.h>
+#include "PrimeEngine/Scene/SceneNode.h"
 
 //namespace PE {
 //	namespace Components {
@@ -18,7 +19,7 @@ std::vector<PhysicsComponent*> PhysicsManager::objectArr = {};
 // Returns true if pint is "inside" the given plane
 bool PhysicsManager::pointColl(Vector3 point, Plane plane, Matrix4x4* m_base) {
 	//point = { 0, 0, 0 };
-	Matrix4x4 inverseTranspose = ((*m_base).inverse()).transpose();
+	//Matrix4x4 inverseTranspose = ((*m_base).inverse()).transpose();
 	//Vector3 newNorm = inverseTranspose * plane.normal;
 	//newNorm.normalize();
 	Vector3 newNorm = plane.normal;
@@ -63,7 +64,8 @@ bool PhysicsManager::projectPoint(Vector3 center, PrimitiveTypes::Float32 radius
 bool PhysicsManager::spBoxCheck(PhysicsComponent* sphere, PhysicsComponent* box, Matrix4x4* m_base) {
 	assert(sphere->type.compare("sphere") == 0 && box->type.compare("box") == 0);
 	Plane* planes = box->returnPlanes();
-	Vector3 center = sphere->getCenter();
+	//Vector3 center = sphere->getCenter();
+	Vector3 center = m_base->getPos();
 	PrimitiveTypes::Float32 radius = sphere->radius;
 
 
@@ -96,18 +98,22 @@ bool PhysicsManager::spBoxCheck(PhysicsComponent* sphere, PhysicsComponent* box,
 // Component 3 is the car
 // Check a physics object against all other known objects for collisions
 // Assuming this will only be called on spheres
-// Returns true if a collision was detected
-bool PhysicsManager::fullCheck(PhysicsComponent* phys)
+// Returns a vector of colliding objects that are colliding with the soldier, else a nullptr array
+std::vector<PhysicsComponent*> PhysicsManager::fullCheck(PhysicsComponent* phys)
 {
-	bool collision = false;
+	std::vector<PhysicsComponent*> collList;
 
 	for (int i = 0; i < objectArr.size(); ++i) {
 		if (objectArr[i]->label != phys->label) {
 			if (phys->type.compare("sphere") == 0 && objectArr[i]->type.compare("box") == 0) {
-				collision = spBoxCheck(phys, objectArr[i], phys->m_base);
+				if (spBoxCheck(phys, objectArr[i], phys->m_base)) {
+					collList.push_back(objectArr[i]);
+				}
 			}
 			else if (phys->type.compare("box") == 0 && objectArr[i]->type.compare("sphere") == 0) {
-				collision = spBoxCheck(objectArr[i], phys, phys->m_base);
+				if (spBoxCheck(objectArr[i], phys, phys->m_base)) {
+					collList.push_back(objectArr[i]);
+				}
 			}
 			else {
 				continue;
@@ -115,7 +121,7 @@ bool PhysicsManager::fullCheck(PhysicsComponent* phys)
 		}
 	}
 
-	return collision;
+	return collList;
 }
 
 void PhysicsManager::addComponent(PhysicsComponent* p) {
@@ -127,6 +133,94 @@ void PhysicsManager::addComponent(PhysicsComponent* p) {
 
 Vector3 PhysicsManager::collAdjust(PhysicsComponent) {
 	return Vector3();
+}
+
+/*
+// Compares the dot product of the forward vector with every plane's normal,
+// returning the normal of the nearest plane or the average normals of all nearest planes
+Vector3 PhysicsManager::nearestPlane(Plane* planeArr, Vector3 forwardVec) {
+	float minVal = 10;
+	std::vector<Plane> planeVec;
+	Plane* minPlane;
+
+	float allowedDiff = 3.0;
+
+	for (int i = 0; i < 6; ++i) {
+		float dotCompare = forwardVec.dotProduct(planeArr[i].getNormal());
+		if (dotCompare < minVal) {
+			minVal = dotCompare;
+			minPlane = &planeArr[i];
+		}
+	}
+
+	Vector3 normal = minPlane->getNormal();
+
+
+	for (int i = 0; i < 6; ++i) {
+		float dotCompare = forwardVec.dotProduct(planeArr[i].getNormal());
+		if (dotCompare <= minVal - allowedDiff) {
+			normal = planeArr[i].getNormal();
+		}
+			
+	}
+
+	normal.normalize();
+
+	return normal;
+}
+
+*/
+
+
+// Finds the nearest planes to the center and averages their normals
+// I want to calculate the orthogonal distance from the center to the plane for every plane
+Vector3 PhysicsManager::nearestPlane(Plane* planeArr, Vector3 forwardVec, Vector3 point) {
+	PrimitiveTypes::Float32 minVal = -999999;
+	Plane* minPlane;
+	
+	for (int i = 0; i < 6; ++i) {
+		Plane plane = planeArr[i];
+		Vector3 newNorm = plane.getNormal();
+		PrimitiveTypes::Float32 d = newNorm.dotProduct(plane.getPoints()[0]) * -1;
+		PrimitiveTypes::Float32 e = point.dotProduct(newNorm);
+		PrimitiveTypes::Float32 c = e + d;
+
+
+		if (c > minVal) {
+			minPlane = &planeArr[i];
+			minVal = c;
+		}
+	}
+
+	return minPlane->getNormal();
+
+}
+
+void PhysicsManager::checkAndMove(Matrix4x4* m_base, PhysicsComponent* p, Vector3 curPos, Vector3 dir, float dist) {
+	std::vector<PhysicsComponent*> collList = fullCheck(p);
+
+	if (collList.size() > 0) {
+		if (!p->constDir) {
+			for (int i = 0; i < collList.size(); ++i) {
+				Plane* planeList = collList[i]->returnPlanes();
+				//Plane nearest = nearestPlane(planeList, dir);
+				dir = dir + nearestPlane(planeList, dir, p->getCenter());
+				dir.normalize();
+			}
+			p->dir = dir;
+			//p->constDir = true;
+		}
+
+		//m_base->turnInDirection(dir, 3.1415f);
+		m_base->setPos(curPos + dir * dist);
+	}
+	else {
+		p->constDir = false;
+		m_base->turnInDirection(dir, 3.1415f);
+		m_base->setPos(curPos + dir * dist);
+	}
+
+	return;
 }
 //	}
 //}

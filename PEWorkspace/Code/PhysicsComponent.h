@@ -43,6 +43,8 @@
 			Vector3 center;
 			PrimitiveTypes::Float32 radius;
 			std::string type;
+			bool constDir = false;
+			Vector3 dir;
 		};
 
 //	}

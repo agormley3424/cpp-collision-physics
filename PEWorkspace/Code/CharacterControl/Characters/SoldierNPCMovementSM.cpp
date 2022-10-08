@@ -91,7 +91,7 @@ void SoldierNPCMovementSM::do_UPDATE(PE::Events::Event *pEvt)
 {
 
 	SceneNode* pSN = getParentsSceneNode();
-	std::cerr << (PhysicsManager::fullCheck(pSN->p));
+	//std::cerr << (PhysicsManager::fullCheck(pSN->p));
 	if (m_state == WALKING_TO_TARGET)
 	{
 		// see if parent has scene node component
@@ -119,8 +119,10 @@ void SoldierNPCMovementSM::do_UPDATE(PE::Events::Event *pEvt)
 				}
 
 				// instantaneous turn
-				pSN->m_base.turnInDirection(dir, 3.1415f);
-				pSN->m_base.setPos(curPos + dir * dist);
+				//pSN->m_base.turnInDirection(dir, 3.1415f);
+				//pSN->m_base.setPos(curPos + dir * dist);
+
+				PhysicsManager::checkAndMove(&(pSN->m_base), pSN->p, curPos, dir, dist);
 
 				//std::cerr << (PhysicsManager::fullCheck(pSN->p));
 			}

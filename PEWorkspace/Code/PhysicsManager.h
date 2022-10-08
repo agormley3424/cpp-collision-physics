@@ -4,6 +4,7 @@
 #include <vector>
 #include "PhysicsComponent.h"
 #include "PrimeEngine/Math/Vector3.h"
+#include "PrimeEngine/Scene/SceneNode.h"
 //#include "PrimeEngine/Scene/SceneNode.h"
 
 
@@ -22,7 +23,11 @@
 			static Vector3 collAdjust(PhysicsComponent);
 			static bool pointColl(Vector3 point, Plane plane, Matrix4x4* m_base);
 			static bool spBoxCheck(PhysicsComponent* sphere, PhysicsComponent* box, Matrix4x4* m_base);
-			static bool fullCheck(PhysicsComponent* phys);
+			static std::vector<PhysicsComponent*> PhysicsManager::fullCheck(PhysicsComponent* phys);
+
+			static Vector3 nearestPlane(Plane* planeArr, Vector3 forwardVec, Vector3 point);
+
+			static void checkAndMove(Matrix4x4* m_base, PhysicsComponent* p, Vector3 curPos, Vector3 dir, float dist);
 
 
 			//static vector<PhysicsComponent*> objectArr(100, NULL);
