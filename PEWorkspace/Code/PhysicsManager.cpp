@@ -200,23 +200,26 @@ void PhysicsManager::checkAndMove(Matrix4x4* m_base, PhysicsComponent* p, Vector
 	std::vector<PhysicsComponent*> collList = fullCheck(p);
 
 	if (collList.size() > 0) {
-		if (!p->constDir) {
-			for (int i = 0; i < collList.size(); ++i) {
-				Plane* planeList = collList[i]->returnPlanes();
-				//Plane nearest = nearestPlane(planeList, dir);
-				dir = dir + nearestPlane(planeList, dir, p->getCenter());
-				dir.normalize();
-			}
-			p->dir = dir;
-			//p->constDir = true;
+		for (int i = 0; i < collList.size(); ++i) {
+			Plane* planeList = collList[i]->returnPlanes();
+			//Plane nearest = nearestPlane(planeList, dir);
+			dir = dir + nearestPlane(planeList, dir, p->getCenter());
+			dir.normalize();
 		}
+		//p->dir = dir;
+		//p->constDir = true;
 
+		
+		Vector3 betterDir = Vector3(dir.getX(), 0, dir.getZ());
+		
 		//m_base->turnInDirection(dir, 3.1415f);
-		m_base->setPos(curPos + dir * dist);
+		m_base->setPos(curPos + betterDir * dist);
 	}
 	else {
-		p->constDir = false;
-		m_base->turnInDirection(dir, 3.1415f);
+		//p->constDir = false;
+		//Vector3 subVec = { 0, p->dir.getY() - 1, 0 };
+		//m_base->turnInDirection(dir, 3.1415f);
+		//m_base->setPos((curPos + subVec) + dir * dist);
 		m_base->setPos(curPos + dir * dist);
 	}
 

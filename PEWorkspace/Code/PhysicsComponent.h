@@ -44,7 +44,7 @@
 			PrimitiveTypes::Float32 radius;
 			std::string type;
 			bool constDir = false;
-			Vector3 dir;
+			Vector3 dir = { 0, -1, 0 };
 		};
 
 //	}

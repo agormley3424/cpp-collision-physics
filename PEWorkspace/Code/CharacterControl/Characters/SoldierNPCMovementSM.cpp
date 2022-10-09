@@ -75,6 +75,28 @@ void SoldierNPCMovementSM::do_SoldierNPCMovementSM_Event_MOVE_TO(PE::Events::Eve
 	SoldierNPC *pSol = getFirstParentByTypePtr<SoldierNPC>();
 	pSol->getFirstComponent<PE::Components::SceneNode>()->handleEvent(pOutEvt);
 
+	SceneNode* pSN = getParentsSceneNode();
+
+	if (m_state == WALKING_TO_TARGET)
+	{
+		// see if parent has scene node component
+
+		if (pSN)
+		{
+			Vector3 curPos = pSN->m_base.getPos();
+			float dsqr = (m_targetPostion - curPos).lengthSqr();
+
+			if (dsqr > 0.01f)
+			{
+				Vector3 dir = (m_targetPostion - curPos);
+				dir.normalize();
+
+				pSN->m_base.turnInDirection(dir, 3.1415f);
+			}
+		}
+	}
+	
+
 	// release memory now that event is processed
 	h.release();
 }
