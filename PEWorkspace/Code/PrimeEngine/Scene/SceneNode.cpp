@@ -21,7 +21,7 @@ SceneNode::SceneNode(PE::GameContext &context, PE::MemoryArena arena, Handle hMy
 {
 }
 
-void SceneNode::physicsTime(Matrix4x4* in_base, Matrix4x4* in_worldTransform, Mesh* m, MeshInstance* mi, std::string type) {
+void SceneNode:: physicsTime(Matrix4x4* in_base, Matrix4x4* in_worldTransform, Mesh* m, MeshInstance* mi, std::string type) {
 	if (!hasPhysics) {
 		hasPhysics = true;
 		p = new PhysicsComponent(in_base, in_worldTransform, m, mi, type);

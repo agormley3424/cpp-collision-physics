@@ -1,4 +1,16 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(400,5): warning MSB8029: The Intermediate directory or Output directory cannot reside under the Temporary directory as it could lead to issues with incremental build.
+﻿  DebugRenderer.cpp
+  DefaultAnimationSM.cpp
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\primeengine\scene\defaultanimationsm.cpp(364): warning C4018: '<': signed/unsigned mismatch
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\primeengine\scene\defaultanimationsm.cpp(390): warning C4018: '<': signed/unsigned mismatch
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\primeengine\scene\defaultanimationsm.cpp(393): warning C4018: '<': signed/unsigned mismatch
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\primeengine\scene\defaultanimationsm.cpp(428): warning C4018: '<': signed/unsigned mismatch
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\primeengine\scene\defaultanimationsm.cpp(454): warning C4018: '<': signed/unsigned mismatch
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\primeengine\scene\defaultanimationsm.cpp(441): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\primeengine\scene\defaultanimationsm.cpp(479): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+c:\users\aaron\desktop\schoolwork\csci_522\hw4\peworkspace\code\primeengine\scene\defaultanimationsm.cpp(507): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
 ShaderAction.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
 SetInstanceControlConstantsShaderAction.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
 SA_SetAndBind_ConstResource_SingleObjectAnimationPalette.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library

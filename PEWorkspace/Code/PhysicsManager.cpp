@@ -217,10 +217,10 @@ void PhysicsManager::checkAndMove(Matrix4x4* m_base, PhysicsComponent* p, Vector
 	}
 	else {
 		//p->constDir = false;
-		//Vector3 subVec = { 0, p->dir.getY() - 1, 0 };
+		Vector3 subVec = { 0, p->dir.getY() - 1, 0 };
 		//m_base->turnInDirection(dir, 3.1415f);
-		//m_base->setPos((curPos + subVec) + dir * dist);
-		m_base->setPos(curPos + dir * dist);
+		m_base->setPos((curPos + subVec) + dir * dist);
+		//m_base->setPos(curPos + dir * dist);
 	}
 
 	return;

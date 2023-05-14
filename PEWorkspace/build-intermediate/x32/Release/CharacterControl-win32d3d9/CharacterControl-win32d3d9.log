@@ -1,0 +1,35 @@
+﻿  Assembling CharacterControl\test.asm...
+  Assembling CharacterControl\testfunc_c_stdcall.asm...
+  SoldierNPC.cpp
+  SoldierNPCAnimationSM.cpp
+  SoldierNPCBehaviorSM.cpp
+  SoldierNPCMovementSM.cpp
+  ClientSpaceShip.cpp
+  ClientSpaceShipControls.cpp
+  ClientCharacterControlGame.cpp
+  ClientGameObjectManagerAddon.cpp
+  Events.cpp
+  GameObjectManagerAddon.cpp
+  GlobalRegistry.cpp
+  ServerCharacterControlGame.cpp
+CharacterControl\Characters\SoldierNPCBehaviorSM.cpp(104): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+CharacterControl\Characters\SoldierNPC.cpp(91): warning C4305: 'argument': truncation from 'double' to 'float'
+  ServerGameObjectManagerAddon.cpp
+  ClientTank.cpp
+  WayPoint.cpp
+  main.cpp
+  PhysicsComponent.cpp
+  PhysicsManager.cpp
+  Plane.cpp
+PhysicsComponent.cpp(27): warning C4018: '<': signed/unsigned mismatch
+PhysicsComponent.cpp(103): warning C4305: '=': truncation from 'double' to 'PrimitiveTypes::Float32'
+PhysicsManager.cpp(106): warning C4018: '<': signed/unsigned mismatch
+PhysicsManager.cpp(203): warning C4018: '<': signed/unsigned mismatch
+  CharacterControl-win32d3d9.vcxproj -> C:\Users\aaron\Desktop\Schoolwork\CSCI_522\HW4\PEWorkspace\Code\..\build\CharacterControl-win32d3d9.exe
+  ..\External\DownloadedLibraries\glew-1.9.0\bin\glew32.dll
+  ..\External\DownloadedLibraries\glew-1.9.0\bin\glew32mx.dll
+          2 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.
+          1 file(s) copied.

@@ -1,0 +1,245 @@
+﻿  nums_spe.c
+  D3D11_IndexBufferGPU.cpp
+  D3D11_ResourceBufferGPU.cpp
+  D3D11_VertexBufferGPU.cpp
+  D3D9_IndexBufferGPU.cpp
+  D3D9_VertexBufferGPU.cpp
+  DX9_KeyboardMouse.cpp
+  DX9_XInput.cpp
+  Effect.cpp
+  EffectManager.cpp
+  EffectManagerEffects.cpp
+  Effect_D3D11.cpp
+  Effect_D3D9.cpp
+  Effect_GL.cpp
+  Effect_Lua.cpp
+  ExternalPerTechniqueData.cpp
+  GLSLAttributes.cpp
+  PEAlphaBlendState.cpp
+PrimeEngine\APIAbstraction\Effect\Effect.cpp(181): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\APIAbstraction\Effect\Effect.cpp(182): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\APIAbstraction\Effect\Effect.cpp(183): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\APIAbstraction\Effect\Effect.cpp(184): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  PEDepthStencilState.cpp
+  PERasterizerState.cpp
+  AnimSetBufferGPU.cpp
+  BufferInfo.cpp
+  IndexBufferGPU.cpp
+  ResourceBufferGPU.cpp
+  VertexBufferGPU.cpp
+  VertexBufferGPUInputGeoDescs.cpp
+  VertexBufferGPUManager.cpp
+  GPUMaterial.cpp
+  Input.cpp
+  OGL_IndexBufferGPU.cpp
+  OGL_VertexBufferGPU.cpp
+  GPUTextureManager.cpp
+PrimeEngine\APIAbstraction\GPUBuffers\IndexBufferGPU.cpp(24): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+  SamplerState.cpp
+  Texture.cpp
+  Texture_DDS_Loader_Common.cpp
+  Texture_DDS_Loader_D3D.cpp
+  Texture_DrawableIntoColorTexture.cpp
+  Texture_DrawableIntoColorTextureArray.cpp
+  Texture_DrawableIntoColorTextureWithDepth.cpp
+  Texture_DrawableIntoDepthTexture.cpp
+  Timer.cpp
+  WinTimer.cpp
+  WinApplication.cpp
+  Component.cpp
+  Event.cpp
+PrimeEngine\APIAbstraction\Texture\Texture.cpp(73): warning C4800: 'LPDIRECT3DTEXTURE9': forcing value to bool 'true' or 'false' (performance warning)
+PrimeEngine\APIAbstraction\Texture\Texture_DDS_Loader_Common.cpp(305): warning C4800: 'uint32_t': forcing value to bool 'true' or 'false' (performance warning)
+PrimeEngine\APIAbstraction\Texture\Texture_DDS_Loader_Common.cpp(310): warning C4800: 'unsigned char *': forcing value to bool 'true' or 'false' (performance warning)
+  EventQueue.cpp
+  EventQueueManager.cpp
+PrimeEngine\Application\WinApplication.cpp(47): warning C4838: conversion from 'unsigned int' to 'LONG' requires a narrowing conversion
+  StandardControllerEvents.cpp
+  StandardEvents.cpp
+  StandardGameEvents.cpp
+  StandardKeyboardEvents.cpp
+  FileReader.cpp
+  FileWriter.cpp
+  ClientGame.cpp
+  GameContext.cpp
+  GlobalRegistry.cpp
+  ServerGame.cpp
+  Camera.cpp
+  DefaultGameControls.cpp
+  GameObjectManager.cpp
+  GameThreadJob.cpp
+PrimeEngine\FileSystem\FileReader.cpp(24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+PrimeEngine\FileSystem\FileReader.cpp(115): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: see declaration of 'fscanf'
+PrimeEngine\FileSystem\FileReader.cpp(124): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: see declaration of 'fscanf'
+PrimeEngine\FileSystem\FileReader.cpp(181): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+PrimeEngine\FileSystem\FileReader.cpp(210): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+  ColorBufferCPU.cpp
+  IndexBufferCPU.cpp
+  MaterialCPU.cpp
+  MaterialSetCPU.cpp
+  MeshCPU.cpp
+PrimeEngine\Geometry\IndexBufferCPU\IndexBufferCPU.cpp(21): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+  PointListCPU.cpp
+  NormalBufferCPU.cpp
+PrimeEngine\Geometry\MaterialCPU\MaterialCPU.cpp(215): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+PrimeEngine\Geometry\MaterialCPU\MaterialCPU.cpp(225): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  NormalBufferCPUManager.cpp
+  BladeFireParticleSystemCPU.cpp
+PrimeEngine\GameThreadJob.cpp(314): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\GameThreadJob.cpp(325): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\GameThreadJob.cpp(350): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  ExplosionParticleSystemCPU.cpp
+  FireParticleSystemCPU.cpp
+  ParticleBufferCPU.cpp
+  ParticleSystemCPU.cpp
+  RainParticleSystemCPU.cpp
+  SmokeParticleSystemCPU.cpp
+  PositionBufferCPU.cpp
+  PositionBufferCPUManager.cpp
+  AnimationCPU.cpp
+  AnimationSetCPU.cpp
+  AnimationSetGPUManager.cpp
+  SkeletonCPU.cpp
+  SkinWeightsCPU.cpp
+  TangentBuferCPU.cpp
+  TexCoordBufferCPU.cpp
+  TexCoordBufferCPUManager.cpp
+  Log.cpp
+PrimeEngine\Geometry\SkeletonCPU\AnimationCPU.cpp(47): warning C4018: '<': signed/unsigned mismatch
+  ClientLuaEnvironment.cpp
+  EventDataCreators.cpp
+PrimeEngine\Geometry\SkeletonCPU\SkinWeightsCPU.cpp(69): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Geometry\SkeletonCPU\SkinWeightsCPU.cpp(72): warning C4018: '>': signed/unsigned mismatch
+PrimeEngine\Geometry\SkeletonCPU\SkinWeightsCPU.cpp(76): warning C4018: '<': signed/unsigned mismatch
+  LuaEnvironment.cpp
+  ServerLuaEnvironment.cpp
+  MainFunctionArgs.cpp
+  CameraOps.cpp
+  MemoryManager.cpp
+  MemoryPool.cpp
+  ClientConnectionManager.cpp
+  ClientNetworkManager.cpp
+  ConnectionManager.cpp
+  EventManager.cpp
+  NetworkManager.cpp
+  ServerConnectionManager.cpp
+  ServerNetworkManager.cpp
+  StreamManager.cpp
+  Profiling.cpp
+  D3D9Renderer.cpp
+  IRenderer.cpp
+  MiscShaderActions.cpp
+  SA_Bind_Resource.cpp
+PrimeEngine\Networking\Client\ClientNetworkManager.cpp(184): warning C4305: 'initializing': truncation from 'double' to 'float'
+PrimeEngine\Networking\Client\ClientNetworkManager.cpp(175): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  SA_CopyInto_SysMem_FromInstancedObjectsAnimationCSReduceResult.cpp
+  SA_SetAndBind_ConstResource_InstancedObjectsAnimationPalettes.cpp
+PrimeEngine\Networking\EventManager.cpp(206): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\EventManager.cpp(211): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\EventManager.cpp(219): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\EventManager.cpp(225): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\EventManager.cpp(229): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\EventManager.cpp(231): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\EventManager.cpp(234): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\EventManager.cpp(235): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\EventManager.cpp(241): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  SA_SetAndBind_ConstResource_PerInstanceData.cpp
+  SA_SetAndBind_ConstResource_SingleObjectAnimationPalette.cpp
+PrimeEngine\Networking\Server\ServerNetworkManager.cpp(192): warning C4305: 'initializing': truncation from 'double' to 'float'
+PrimeEngine\Networking\Server\ServerNetworkManager.cpp(186): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Networking\Server\ServerNetworkManager.cpp(198): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  SetInstanceControlConstantsShaderAction.cpp
+  SetPerFrameConstantsShaderAction.cpp
+  SetPerMaterialConstantsShaderAction.cpp
+  SetPerObjectConstantsShaderAction.cpp
+  SetPerObjectGroupConstantsShaderAction.cpp
+  ShaderAction.cpp
+  RenderJob.cpp
+  CameraManager.cpp
+  CameraSceneNode.cpp
+  DebugRenderer.cpp
+  DefaultAnimationSM.cpp
+  DrawList.cpp
+  InstancingSceneNode.cpp
+  Light.cpp
+  LineMesh.cpp
+  Mesh.cpp
+  MeshInstance.cpp
+  MeshManager.cpp
+  RootSceneNode.cpp
+PrimeEngine\Scene\DefaultAnimationSM.cpp(364): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Scene\DefaultAnimationSM.cpp(390): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Scene\DefaultAnimationSM.cpp(393): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Scene\DefaultAnimationSM.cpp(428): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Scene\DefaultAnimationSM.cpp(454): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Scene\DefaultAnimationSM.cpp(441): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Scene\DefaultAnimationSM.cpp(479): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Scene\DefaultAnimationSM.cpp(507): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Scene\LineMesh.cpp(95): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Scene\Mesh.cpp(100): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Scene\Mesh.cpp(108): warning C4474: 'sprintf' : too many arguments passed for format string
+  PrimeEngine\Scene\Mesh.cpp(108): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+PrimeEngine\Scene\Mesh.cpp(108): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  SH_DRAW.cpp
+  SceneNode.cpp
+  Skeleton.cpp
+  SkeletonInstance.cpp
+  SkyVolumeMesh.cpp
+  TextMesh.cpp
+  TextSceneNode.cpp
+  SoundManager.cpp
+  Dir.cpp
+PrimeEngine\Scene\MeshManager.cpp(44): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+PrimeEngine\Scene\MeshManager.cpp(96): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+  ErrorHandling.cpp
+  Networkable.cpp
+  PEString.cpp
+PrimeEngine\Scene\SH_DRAW.cpp(204): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Scene\SH_DRAW.cpp(451): warning C4018: '<': signed/unsigned mismatch
+PrimeEngine\Scene\Skeleton.cpp(196): warning C4018: '<': signed/unsigned mismatch
+ShaderAction.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+SetInstanceControlConstantsShaderAction.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+SA_SetAndBind_ConstResource_SingleObjectAnimationPalette.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+SA_SetAndBind_ConstResource_PerInstanceData.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+SA_SetAndBind_ConstResource_InstancedObjectsAnimationPalettes.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+SA_CopyInto_SysMem_FromInstancedObjectsAnimationCSReduceResult.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+Profiling.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+ParticleSystemCPU.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+ParticleBufferCPU.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+VertexBufferGPUInputGeoDescs.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+Effect_GL.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+Effect_D3D11.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+  PrimeEngine-win32d3d9.vcxproj -> C:\Users\aaron\Desktop\Schoolwork\CSCI_522\HW4\PEWorkspace\Code\..\build\PrimeEngine-win32d3d9.lib

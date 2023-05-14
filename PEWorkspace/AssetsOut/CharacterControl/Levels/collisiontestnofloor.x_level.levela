@@ -1,0 +1,10 @@
+LevelLoader.CreateGameObject("PEObject47_tArrow",1.0, 0.0, -0.0, 0.0, 0.0, 1.0, -0.0, 0.0, -0.0, -0.0, 1.0, 0.0, 2866.609383, 0.0, 951.015245, 1.0, 'collisionTestNoFloor.x_PEObject47_tArro.lua', 'CharacterControl',0x1efc5b21, 0x482811ed, 0xa16de4b9, 0x7ae55718)
+
+LevelLoader.CreateGameObject("PEObject17_pCar",-0.886791, 0.0, -0.46217, 0.0, -0.0, 1.0, -0.0, 0.0, 0.46217, 0.0, -0.886791, 0.0, 453.346931, 0.0, 527.207712, 1.0, 'collisionTestNoFloor.x_PEObject17_pCar.lua', 'CharacterControl',0xb2cfd370, 0x1c5411e0, 0x9f4e001b, 0x213b583a)
+
+LevelLoader.CreateGameObject("PEObject15_tArrow",0.412808, 0.0, -0.910818, 0.0, -0.0, 1.0, -0.0, 0.0, 0.910818, 0.0, 0.412808, 0.0, 96.098036, 0.0, -104.926445, 1.0, 'collisionTestNoFloor.x_PEObject15_tArro.lua', 'CharacterControl',0x7077e0cf, 0x1c5411e0, 0xb14b001b, 0x213b583a)
+
+LevelLoader.CreateGameObject("PEObject45_nazi_rep",1.0, 0.0, -0.0, 0.0, 0.0, 1.0, -0.0, 0.0, -0.0, -0.0, 1.0, 0.0, 199.107586, 0.0, -0.0, 1.0, 'collisionTestNoFloor.x_PEObject45_nazi_.lua', 'CharacterControl',0x2bda3070, 0x2bfc11e4, 0x9209b8e8, 0x560d92e3)
+
+LevelLoader.CreateGameObject("PEObject19_tArrow",-0.488974, 0.0, 0.872298, 0.0, 0.0, 1.0, -0.0, 0.0, -0.872298, -0.0, -0.488974, 0.0, 772.550455, 0.0, 1114.193612, 1.0, 'collisionTestNoFloor.x_PEObject19_tArro.lua', 'CharacterControl',0xe01bbe1e, 0x1c5411e0, 0xa2f0001b, 0x213b583a)
+
